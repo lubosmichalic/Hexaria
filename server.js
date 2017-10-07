@@ -6,6 +6,8 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+//db schemas
+const HexBoard = require('./model/hexBoard');
 // and create our instances
 const app = express();
 const router = express.Router();
@@ -14,7 +16,7 @@ const router = express.Router();
 const port = process.env.API_PORT || 3001;
 
 // dbo config
-const mongoDB = `mongodb://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${MONGODB_SERVERURI}`;
+const mongoDB = `mongodb://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_SERVERURI}`;
 mongoose.connect(mongoDB, { useMongoClient: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
