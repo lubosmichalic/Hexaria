@@ -44,6 +44,27 @@ router.get('/', function(req, res) {
   res.json({ message: 'API Initialized!'});
 });
 
+router.route('/hexboards')
+  .get((req, res) => {
+    HexBoard.find((err, hexboards) => {
+      if (err)
+        res.send(err);
+      res.json(hexboards);
+    });
+  })
+
+  .post((req, res) => {
+    const hexboard = new HexBoard();
+    hexboard.area_name = req.body.area_name;
+    hexboard.desc = req.body.desc;
+
+    hexboard.save((err) => {
+      if (err)
+        res.send(err);
+      res.json({ message: 'Hexboard succesfully created' });
+    });
+  });
+
 //Use our router configuration when we call /api
 app.use('/api', router);
 
