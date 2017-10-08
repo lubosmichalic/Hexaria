@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import HexBoard from './HexBoard';
 
 ReactDOM.render(
-  <HexBoard />,
+  <HexBoard
+    url='http://localhost:3001/hexboads'
+    pollInterval = {2000}/>,
   document.getElementById('root')
 );

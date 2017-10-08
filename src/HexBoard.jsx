@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
+import HexTileList from './HexTileList';
 
 class HexBoard extends Component {
-  constructor() {
-    super();
-    this.state = { Message: 'Hello World' };
+  constructor(props) {
+    super(props);
+    this.state = { data: [] };
   }
 
   render() {
-    return (<h1>{this.state.Message}</h1>);
+    return (<HexTileList data={this.state.data} />);
   }
 }
 
