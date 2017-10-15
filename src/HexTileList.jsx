@@ -6,7 +6,7 @@ class HexTileList extends Component{
       return (
         <HexTile
           key={hexTile['_id']}
-          color={hexTile.color}>
+          desc={hexTile.desc}>
           {hexTile.color}
         </HexTile>
       );

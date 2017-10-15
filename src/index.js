@@ -5,7 +5,7 @@ import HexBoard from './HexBoard';
 
 ReactDOM.render(
   <HexBoard
-    url='http://localhost:3001/hexboads'
+    url='http://localhost:3001/api/hexboards'
     pollInterval = {2000}/>,
   document.getElementById('root')
 );
