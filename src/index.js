@@ -6,6 +6,6 @@ import HexBoard from './HexBoard';
 ReactDOM.render(
   <HexBoard
     url='http://localhost:3001/api/hexboards'
-    pollInterval = {2000}/>,
+    pollInterval = {10000}/>,
   document.getElementById('root')
 );

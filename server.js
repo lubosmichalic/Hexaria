@@ -78,7 +78,9 @@ router.route('/hextiles')
   .post((req, res) => {
     const hextile = new HexTile();
     hextile.color = req.body.color;
-
+    hextile.name = req.body.name;
+    hextile.terrain = req.body.terrain;
+    hextile.notes = req.body.notes;
     hextile.save((err) => {
       if (err)
         res.send(err);
