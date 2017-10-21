@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import HexTile from './HexTile';
 class HexTileList extends Component{
+  constructor(props) {
+    super(props);
+
+  }
   render() {
     let tileNodes = this.props.data.map(hexTile =>{
       return (

@@ -26,7 +26,7 @@ class HexBoard extends Component {
     return (
       <div>
         <h2>Hex Tiles:</h2>
-        <HexTileList data={this.state.data} />;
+        <HexTileList url='http://localhost:3001/api/hextiles' />;
       </div>
     )
   }
